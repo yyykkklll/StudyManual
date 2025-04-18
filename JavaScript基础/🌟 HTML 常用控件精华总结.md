@@ -1,111 +1,251 @@
-# 🌟 HTML 常用控件精华总结
+# 🧱 HTML 常见元素全总结（含示例）
+
+> ✅ 每个元素配一个最基本的使用案例，方便快速掌握。
 
 ------
 
-## 🧾 1. 文本类输入控件（`<input>`）
+## 📦 布局与结构元素
 
-### ✅ 单行文本输入
+### `<div>` – 通用容器（无语义）
 
 ```html
-<input type="text" placeholder="请输入内容">
+<div>这是一个容器</div>
 ```
 
-### 🔐 密码输入
+### `<section>` – 语义化内容区域
 
 ```html
-<input type="password" placeholder="请输入密码">
+<section>
+  <h2>新闻</h2>
+  <p>这里是新闻内容</p>
+</section>
 ```
 
-### 📧 邮箱输入
+### `<header>` / `<footer>` – 页头 / 页尾
 
 ```html
-<input type="email" placeholder="example@mail.com">
+<header>网站标题</header>
+<footer>版权信息</footer>
+```
+
+### `<main>` – 页面主要内容
+
+```html
+<main>
+  <h1>文章正文</h1>
+</main>
+```
+
+### `<article>` – 独立内容块
+
+```html
+<article>
+  <h2>博客文章标题</h2>
+  <p>博客内容...</p>
+</article>
+```
+
+### `<nav>` – 导航链接区域
+
+```html
+<nav>
+  <a href="/">首页</a>
+  <a href="/about">关于</a>
+</nav>
 ```
 
 ------
 
-## 🔘 2. 选择类控件
+## 📝 文本相关元素
 
-### ✅ 单选框（Radio）
-
-一组选项中只能选一个，**必须设置相同的 name 才能互斥**：
+### `<h1>` ~ `<h6>` – 标题（h1 最大）
 
 ```html
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+```
+
+### `<p>` – 段落
+
+```html
+<p>这是一段文本内容。</p>
+```
+
+### `<span>` – 行内文本容器（无语义）
+
+```html
+<span style="color:red">高亮文字</span>
+```
+
+### `<strong>` / `<em>` – 强调 / 斜体
+
+```html
+<strong>加粗内容</strong>
+<em>倾斜内容</em>
+```
+
+### `<br>` – 换行
+
+```html
+一行<br>换行了
+```
+
+------
+
+## 🔗 链接与媒体
+
+### `<a>` – 超链接
+
+```html
+<a href="https://example.com">访问网站</a>
+```
+
+### `<img>` – 图片
+
+```html
+<img src="image.jpg" alt="描述文字">
+```
+
+### `<video>` – 视频播放
+
+```html
+<video src="video.mp4" controls></video>
+```
+
+### `<audio>` – 音频播放
+
+```html
+<audio src="audio.mp3" controls></audio>
+```
+
+------
+
+## 📋 列表元素
+
+### `<ul>` / `<ol>` / `<li>` – 无序/有序列表
+
+```html
+<ul>
+  <li>苹果</li>
+  <li>香蕉</li>
+</ul>
+<ol>
+  <li>第一步</li>
+  <li>第二步</li>
+</ol>
+```
+
+------
+
+## 🧾 表格元素
+
+### `<table>` / `<tr>` / `<td>` / `<th>`
+
+```html
+<table>
+  <tr>
+    <th>姓名</th>
+    <th>年龄</th>
+  </tr>
+  <tr>
+    <td>张三</td>
+    <td>18</td>
+  </tr>
+</table>
+```
+
+------
+
+## ✅ 表单控件元素（重点）
+
+### `<form>` – 表单容器
+
+```html
+<form action="/submit" method="post"></form>
+```
+
+### `<input>` – 文本输入、密码、单选、复选等
+
+```html
+<input type="text" placeholder="用户名">
+<input type="password" placeholder="密码">
 <input type="radio" name="gender" value="male"> 男
-<input type="radio" name="gender" value="female"> 女
+<input type="checkbox" name="agree"> 同意
 ```
 
-### ✅ 复选框（Checkbox）
-
-可以选择多个：
+### `<textarea>` – 多行文本输入
 
 ```html
-<input type="checkbox" name="hobby" value="music"> 音乐
-<input type="checkbox" name="hobby" value="sports"> 运动
+<textarea rows="4">输入内容</textarea>
 ```
 
-### 🔽 下拉选择框（Select）
+### `<select>` / `<option>` – 下拉框
 
 ```html
-<select name="city">
-  <option value="beijing">北京</option>
-  <option value="shanghai">上海</option>
+<select>
+  <option value="1">选项一</option>
 </select>
 ```
 
-------
-
-## 📝 3. 多行文本输入（`<textarea>`）
-
-```html
-<textarea rows="4" placeholder="请输入留言..."></textarea>
-```
-
-------
-
-## 🧩 4. 按钮（`<button>` 和 `input[type=submit]`）
-
-### ✅ 表单提交按钮
+### `<button>` – 按钮
 
 ```html
 <button type="submit">提交</button>
-<!-- 或者 -->
-<input type="submit" value="提交">
-```
-
-### 🚫 普通按钮（用于 JS 交互）
-
-```html
-<button type="button" onclick="alert('点击了按钮')">点击我</button>
 ```
 
 ------
 
-## 📦 5. 表单容器（`<form>`）
+## 🔧 元信息和结构标签
+
+### `<!DOCTYPE html>` – 声明文档类型
 
 ```html
-<form action="/submit" method="post">
-  <!-- 各类控件放在这里 -->
-</form>
+<!DOCTYPE html>
 ```
 
-常用属性：
+### `<html>` / `<head>` / `<body>`
 
-- `action`: 提交的 URL
-- `method`: `get` 或 `post`
+```html
+<html>
+  <head>
+    <title>网页标题</title>
+  </head>
+  <body>
+    页面内容
+  </body>
+</html>
+```
+
+### `<meta>` – 页面元信息
+
+```html
+<meta charset="UTF-8">
+```
+
+### `<link>` – 外部资源链接（如 CSS）
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+### `<script>` – 脚本
+
+```html
+<script src="main.js"></script>
+```
 
 ------
 
-## 🛠️ 常用属性汇总
+## 📌 常用全局属性（适用于几乎所有元素）
 
-| 属性          | 说明                           |
-| ------------- | ------------------------------ |
-| `placeholder` | 输入提示文字                   |
-| `name`        | 控件名称，提交表单时作为 key   |
-| `value`       | 默认值                         |
-| `required`    | 是否必填                       |
-| `checked`     | 是否默认选中（radio/checkbox） |
-| `disabled`    | 是否禁用                       |
+| 属性名     | 作用示例                            |
+| ---------- | ----------------------------------- |
+| `id`       | 唯一标识符 `<div id="box">`         |
+| `class`    | 类名 `<p class="info">`             |
+| `style`    | 内联样式 `<span style="color:red">` |
+| `title`    | 鼠标悬停提示 `<a title="跳转">`     |
+| `hidden`   | 隐藏元素 `<div hidden>`             |
+| `disabled` | 禁用控件 `<input disabled>`         |
 
 ------
 
