@@ -10,10 +10,12 @@
 
 ```plaintext
 📁 Java/             → Java 语言基础与进阶笔记
+📁 C++/             → C++ 语言基础与进阶笔记
 📁 JavaScript基础/   → JavaScript & HTML 学习笔记
 📁 Linux/            → 常用命令、Shell 脚本、环境配置等
 📁 SQL/              → SQL 基础、查询练习与优化技巧
 📁 技术路线/         → 学习路线、成长路径与经验总结
+📁 VUE/         → 学习路线、成长路径与经验总结
 📄 README.md         → 项目介绍文件
 ```
 

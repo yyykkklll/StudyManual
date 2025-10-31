@@ -44,7 +44,7 @@ npm run dev
 
 初始化后的项目结构如下（仅列出核心文件）：
 
-```
+```plaintext
 my-vue-app/
 ├── public/                # 静态资源
 ├── src/
@@ -74,7 +74,7 @@ createApp(App).mount('#app')
 #### App.vue 解析
 `App.vue` 是项目的根组件，通常作为其他组件的容器。
 
-```vue
+```html
 <!-- src/App.vue -->
 <template>
   <div id="app">
@@ -113,7 +113,7 @@ Vue3 使用单文件组件（SFC，Single File Component），一个 `.vue` 文�
 #### 示例：创建一个简单的组件
 在 `src/components/` 下创建 `HelloWorld.vue`：
 
-```vue
+```html
 <!-- src/components/HelloWorld.vue -->
 <template>
   <div>
@@ -167,7 +167,7 @@ Vue 组件可以嵌套，父组件通过引入子组件来构建复杂的页面�
 #### 示例：组件嵌套
 1. 在 `src/components/` 下创建 `ChildComponent.vue`：
 
-```vue
+```html
 <!-- src/components/ChildComponent.vue -->
 <template>
   <div>
@@ -184,7 +184,7 @@ export default {
 
 2. 在 `App.vue` 中引入并使用 `ChildComponent`：
 
-```vue
+```html
 <!-- src/App.vue -->
 <template>
   <div id="app">
@@ -225,7 +225,7 @@ Vue 组件通过 `props` 和 `emit` 实现父子通信。
 ##### 示例：
 1. 修改 `ChildComponent.vue` 接收 `props`：
 
-```vue
+```html
 <!-- src/components/ChildComponent.vue -->
 <template>
   <div>
@@ -245,7 +245,7 @@ export default {
 
 2. 在 `App.vue` 中传递数据：
 
-```vue
+```html
 <!-- src/App.vue -->
 <template>
   <div id="app">
@@ -277,7 +277,7 @@ export default {
 ##### 示例：
 1. 修改 `ChildComponent.vue` 触发事件：
 
-```vue
+```html
 <!-- src/components/ChildComponent.vue -->
 <template>
   <div>
@@ -304,7 +304,7 @@ export default {
 
 2. 在 `App.vue` 中监听事件：
 
-```vue
+```html
 <!-- src/App.vue -->
 <template>
   <div id="app">
@@ -352,7 +352,7 @@ Composition API 是 Vue3 的推荐方式，相比 Options API 更灵活，代码
 `setup` 是 Composition API 的入口函数，定义组件的逻辑。
 
 ##### 示例：
-```vue
+```html
 <!-- src/components/HelloWorld.vue -->
 <template>
   <div>
@@ -389,7 +389,7 @@ export default {
 - `reactive`：用于创建复杂的响应式对象。
 
 ##### 示例：
-```vue
+```html
 <!-- src/components/ReactiveDemo.vue -->
 <template>
   <div>
@@ -441,7 +441,7 @@ export default {
 - `watch`：监听响应式数据的变化，执行副作用。
 
 ##### 示例：
-```vue
+```html
 <!-- src/components/ComputedWatch.vue -->
 <template>
   <div>
@@ -488,7 +488,7 @@ export default {
 Vue2 主要使用 Options API，代码组织基于 `data`、`methods`、`computed` 等选项。
 
 #### 示例（Options API）：
-```vue
+```html
 <!-- Vue2 风格 -->
 <template>
   <div>
@@ -533,7 +533,7 @@ export default {
 #### 1. 创建 TodoItem.vue
 `TodoItem.vue` 表示单个任务项，接收任务数据并触发删除事件。
 
-```vue
+```html
 <!-- src/components/TodoItem.vue -->
 <template>
   <div class="todo-item">
@@ -577,7 +577,7 @@ button {
 #### 2. 创建 TodoList.vue
 `TodoList.vue` 管理任务列表，处理添加和删除逻辑。
 
-```vue
+```html
 <!-- src/components/TodoList.vue -->
 <template>
   <div class="todo-list">
@@ -660,7 +660,7 @@ button {
 ```
 
 #### 3. 在 App.vue 中使用 TodoList
-```vue
+```html
 <!-- src/App.vue -->
 <template>
   <div id="app">
